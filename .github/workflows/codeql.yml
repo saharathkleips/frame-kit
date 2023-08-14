@@ -1,7 +1,12 @@
 name: CodeQL Analyze
 
 on:
-  workflow_call:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
   schedule:
     - cron: 00 16 * * 1
 
