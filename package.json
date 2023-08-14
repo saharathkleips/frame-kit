@@ -5,10 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "build": "vite build",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:ts": "eslint . --cache --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:css": "stylelint **/*.css --cache",
+    "lint:formatting": "prettier . --check --cache",
+    "lint:types": "tsc",
+    "prepare": "husky install",
+    "pretest": "npm run lint"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -29,7 +34,11 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "3.0.1",
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-prettier": "^4.0.2",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }
