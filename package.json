@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "repository": "https://github.com/saharathkleips/frame-kit",
   "description": "A simple tool for adding frames and borders around your images.",
+  "license": "AGPL-3.0-or-later",
   "private": true,
   "type": "module",
   "engines": {
