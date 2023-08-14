@@ -10,9 +10,16 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   test:
     uses: ./.github/workflows/test.yml
+    permissions:
+      actions: read
+      security-events: write
+
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
@@ -24,7 +31,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     permissions:
-      contents: read
       pages: write
       id-token: write
 

@@ -12,6 +12,10 @@ permissions:
 jobs:
   codeql:
     uses: ./.github/workflows/codeql.yml
+    permissions:
+      actions: read
+      security-events: write
+
   test:
     name: Test
     runs-on: ubuntu-latest
