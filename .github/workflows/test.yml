@@ -6,19 +6,20 @@ on:
     branches:
       - main
 
-permissions:
-  contents: read
-
 jobs:
   codeql:
     uses: ./.github/workflows/codeql.yml
     permissions:
+      contents: read
       actions: read
       security-events: write
 
   test:
     name: Test
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout Repository
