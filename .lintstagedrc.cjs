@@ -1,5 +1,4 @@
 module.exports = {
-    "*.{ts,tsx}": [
-        "eslint --cache --fix",
-    ]
-}
+  "*": "prettier -uw --cache",
+  "*.{ts,tsx}": ["eslint --cache --fix"],
+};
