@@ -15,8 +15,6 @@ jobs:
     uses: ./.github/workflows/test.yml
     permissions:
       contents: read
-      actions: read
-      security-events: write
 
   deploy:
     name: Deploy
