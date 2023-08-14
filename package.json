@@ -21,7 +21,8 @@
     "lint:formatting": "prettier . --check --cache",
     "lint:types": "tsc",
     "prepare": "husky install",
-    "pretest": "npm run lint"
+    "pretest": "npm run lint",
+    "test": "echo OK"
   },
   "dependencies": {
     "react": "^18.2.0",
