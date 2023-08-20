@@ -3,16 +3,14 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
 import { imageMagick } from ".";
+import imageData from "../../assets/vite.png?uint8array";
 
 export async function loadAndRotate(): Promise<string | null> {
-  const { buildInputFile, execute } = await imageMagick();
+  const { call } = await imageMagick();
 
-  const { outputFiles } = await execute({
-    inputFiles: [
-      await buildInputFile("https://picsum.photos/200/300", "200x300.png"),
-    ],
-    commands: [`convert 200x300.png -rotate 70 test1.png`],
-  });
+  const image = { name: "vite.png", content: imageData };
+  const command = ["convert", "vite.png", "-rotate", "90", "out.png"];
+  const { outputFiles } = await call([image], command);
 
   const file = outputFiles?.[0];
 

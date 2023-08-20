@@ -25,7 +25,7 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => void loadImage()}>Load Rotated Image</button>
-        {url && <img src={url}></img>}
+        {url && <img src={url} width={150} height={150}></img>}
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
