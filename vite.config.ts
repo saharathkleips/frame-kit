@@ -13,6 +13,43 @@ export default defineConfig({
       devOptions: {
         enabled: true,
       },
+      includeAssets: [
+        "favicon.ico",
+        "favicon.svg",
+        "apple-touch-icon.png",
+        "mask-icon.svg",
+      ],
+      manifest: {
+        name: "Frame Kit",
+        short_name: "FrameKit",
+        description:
+          "A simple tool for adding frames and borders around your images.",
+        theme_color: "#ffffff",
+        icons: [
+          {
+            src: "pwa-64x64.png",
+            sizes: "64x64",
+            type: "image/png",
+          },
+          {
+            src: "pwa-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "pwa-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any",
+          },
+          {
+            src: "maskable-icon-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable",
+          },
+        ],
+      },
     }),
   ],
   base: "/frame-kit/",
