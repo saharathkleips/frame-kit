@@ -1,8 +1,9 @@
 import { useCallback, useState } from "react";
 import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import favicon from "/favicon.svg";
 import "./App.css";
 import { loadAndRotate } from "./lib/image-magick/load-and-rotate";
+import ReloadPrompt from "./ReloadPrompt";
 
 function App() {
   const [url, setUrl] = useState("");
@@ -16,7 +17,7 @@ function App() {
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img src={favicon} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
@@ -25,7 +26,7 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => void loadImage()}>Load Rotated Image</button>
-        {url && <img src={url}></img>}
+        {url && <img src={url} width={150} height={150}></img>}
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -33,6 +34,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <ReloadPrompt />
     </>
   );
 }

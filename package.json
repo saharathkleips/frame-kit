@@ -21,6 +21,8 @@
     "lint:css": "stylelint **/*.css --cache",
     "lint:formatting": "prettier . --check --cache",
     "lint:types": "tsc",
+    "generate": "npm-run-all --parallel generate:*",
+    "generate:assets": "pwa-assets-generator",
     "prepare": "husky install",
     "pretest": "npm run lint",
     "test": "echo OK"
@@ -36,6 +38,7 @@
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "@vite-pwa/assets-generator": "^0.0.4",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^9.0.0",
@@ -51,6 +54,9 @@
     "stylelint-config-standard": "^34.0.0",
     "stylelint-prettier": "^4.0.2",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-arraybuffer": "^0.0.2",
+    "vite-plugin-pwa": "^0.16.4",
+    "workbox-window": "^7.0.0"
   }
 }
