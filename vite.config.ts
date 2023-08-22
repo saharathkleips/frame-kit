@@ -18,6 +18,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*"],
+        maximumFileSizeToCacheInBytes: 6000000,
       },
       includeAssets: ["**/*"],
       manifest: {
