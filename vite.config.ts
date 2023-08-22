@@ -11,11 +11,15 @@ export default defineConfig({
     eslintPlugin(),
     react(),
     VitePWA({
-      registerType: "autoUpdate",
       devOptions: {
         enabled: true,
+        type: "module",
+        navigateFallback: "index.html",
       },
-      includeAssets: ["favicon.ico", "favicon.svg", "apple-touch-icon.png"],
+      workbox: {
+        globPatterns: ["**/*"],
+      },
+      includeAssets: ["**/*"],
       manifest: {
         name: "Frame Kit",
         short_name: "FrameKit",

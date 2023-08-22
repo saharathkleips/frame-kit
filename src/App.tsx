@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import favicon from "/favicon.svg";
 import "./App.css";
 import { loadAndRotate } from "./lib/image-magick/load-and-rotate";
+import ReloadPrompt from "./ReloadPrompt";
 
 function App() {
   const [url, setUrl] = useState("");
@@ -33,6 +34,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <ReloadPrompt />
     </>
   );
 }
