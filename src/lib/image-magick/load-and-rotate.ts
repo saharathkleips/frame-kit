@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
 import { imageMagick } from ".";
-import imageData from "../../assets/vite.png?uint8array";
+import imageData from "../../assets/test-image.png?uint8array";
 
 export async function loadAndRotate(): Promise<string | null> {
   const { call } = await imageMagick();

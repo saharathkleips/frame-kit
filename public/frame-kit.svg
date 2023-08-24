@@ -1,0 +1,38 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+	<title>frame-kit</title>
+	<defs>
+		<filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
+			<feDropShadow dx="8" dy="8" stdDeviation="0" flood-color="#000000" flood-opacity="1"/>
+		</filter>
+	</defs>
+	<style>
+		.background { 
+			filter: url(#drop-shadow);
+			fill: #3300ff;
+			stroke: #000000;
+			paint-order:stroke fill markers;
+			stroke-linejoin: round;
+			stroke-width: 10 
+		} 
+		.sun { 
+			filter: url(#drop-shadow);
+			fill: #ffff00;
+			stroke: #000000;
+			paint-order:stroke fill markers;
+			stroke-linejoin: round;
+			stroke-width: 10 
+		} 
+		.mountain { 
+			filter: url(#drop-shadow);
+			fill: #2fff2f;
+			stroke: #000000;
+			paint-order:stroke fill markers;
+			stroke-linejoin: round;
+			stroke-width: 10 
+		} 
+	</style>
+	<circle id="Background" class="background" cx="250" cy="250" r="225"/>
+	<circle id="Sun" class="sun" cx="345" cy="155" r="35"/>
+	<path id="Mountain Back" class="mountain" d="m233.7 151l177.7 176.9h-355.4z"/>
+	<path id="Mountain Front" class="mountain" d="m167.5 216l111.5 112h-223z"/>
+</svg>
