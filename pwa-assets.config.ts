@@ -5,5 +5,5 @@ import {
 
 export default defineConfig({
   preset,
-  images: ["public/favicon.svg"],
+  images: ["public/frame-kit.svg"],
 });
