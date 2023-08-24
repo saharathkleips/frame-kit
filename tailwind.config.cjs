@@ -1,0 +1,18 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./index.html", "./src/**/*.{ts,tsx}"],
+  theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      black: "#000000",
+    },
+    boxShadow: {
+      sm: "2px 2px 0px 0px #000000",
+      DEFAULT: "3px 3px 0px 0px #000000",
+      lg: "6px 6px 0px 0px #000000",
+    },
+    extend: {},
+  },
+  plugins: [],
+};

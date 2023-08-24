@@ -1,5 +1,3 @@
-import "./ReloadPrompt.css";
-
 import { useRegisterSW } from "virtual:pwa-register/react";
 
 function ReloadPrompt() {
@@ -23,10 +21,10 @@ function ReloadPrompt() {
   };
 
   return (
-    <div className="container">
+    <div>
       {(offlineReady || needRefresh) && (
-        <div className="toast">
-          <div className="message">
+        <div>
+          <div>
             {offlineReady ? (
               <span>Frame Kit is offline ready.</span>
             ) : (
@@ -35,7 +33,6 @@ function ReloadPrompt() {
           </div>
           {needRefresh && (
             <button
-              className="toast-button"
               onClick={() => {
                 console.log("reloading...");
                 void updateServiceWorker(true);
@@ -45,7 +42,6 @@ function ReloadPrompt() {
             </button>
           )}
           <button
-            className="toast-button"
             onClick={() => {
               close();
             }}
