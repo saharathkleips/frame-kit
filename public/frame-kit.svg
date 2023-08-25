@@ -8,7 +8,7 @@
 	<style>
 		.background { 
 			filter: url(#drop-shadow);
-			fill: #3300ff;
+			fill: #A7D5EA;
 			stroke: #000000;
 			paint-order:stroke fill markers;
 			stroke-linejoin: round;
@@ -16,7 +16,7 @@
 		} 
 		.sun { 
 			filter: url(#drop-shadow);
-			fill: #ffff00;
+			fill: #F8C945;
 			stroke: #000000;
 			paint-order:stroke fill markers;
 			stroke-linejoin: round;
@@ -24,7 +24,7 @@
 		} 
 		.mountain { 
 			filter: url(#drop-shadow);
-			fill: #2fff2f;
+			fill: #62CB96;
 			stroke: #000000;
 			paint-order:stroke fill markers;
 			stroke-linejoin: round;

@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="min-h-screen bg-tan">
       <div>
         <img src={logo} alt="Frame Kit Logo" />
       </div>
@@ -21,12 +21,16 @@ function App() {
       <div>
         <Button onClick={() => void loadImage()}>Load Rotated Image</Button>
         {url && <img src={url} width={150} height={150}></img>}
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <hr />
+        <Button color="bg-tan">Tan Button</Button>
+        <Button color="bg-yellow">Yellow Button</Button>
+        <Button color="bg-blue">Blue Button</Button>
+        <Button color="bg-green">Green Button</Button>
+        <Button color="bg-pink">Pink Button</Button>
+        <Button color="bg-red">Red Button</Button>
       </div>
       <ReloadPrompt />
-    </>
+    </div>
   );
 }
 
