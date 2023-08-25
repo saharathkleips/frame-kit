@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
@@ -13,6 +15,10 @@ module.exports = {
       green: "#62CB96",
       pink: "#CE84C7",
       red: "#D85988",
+    },
+    fontFamily: {
+      sans: ["Work Sans", defaultTheme.fontFamily.sans],
+      heading: ["Work Sans", defaultTheme.fontFamily.sans],
     },
     boxShadow: {
       sm: "2px 2px 0px 0px #000000",

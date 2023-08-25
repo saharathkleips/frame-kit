@@ -13,15 +13,23 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-tan">
+    <div className="min-h-screen bg-tan selection:bg-yellow">
+      <h1 className="font-heading text-xl font-bold">
+        <span className="text-red">[</span>
+        <span> frame kit </span>
+        <span className="text-red">]</span>
+      </h1>
+      <h2 className="text-lg">
+        A simple tool for adding frames and borders around your images.
+      </h2>
       <div>
-        <img src={logo} alt="Frame Kit Logo" />
+        <img src={logo} width={200} height={200} alt="Frame Kit Logo" />
       </div>
-      <h1 className="text-3xl font-bold underline">Frame Kit</h1>
       <div>
         <Button onClick={() => void loadImage()}>Load Rotated Image</Button>
         {url && <img src={url} width={150} height={150}></img>}
-        <hr />
+      </div>
+      <div>
         <Button color="bg-tan">Tan Button</Button>
         <Button color="bg-yellow">Yellow Button</Button>
         <Button color="bg-blue">Blue Button</Button>

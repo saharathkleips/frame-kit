@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import eslintPlugin from "@nabla/vite-plugin-eslint";
 import { VitePWA } from "vite-plugin-pwa";
 import arraybuffer from "vite-plugin-arraybuffer";
+import Unfonts from "unplugin-fonts/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,6 +11,16 @@ export default defineConfig({
     arraybuffer(),
     eslintPlugin(),
     react(),
+    Unfonts({
+      google: {
+        families: [
+          {
+            name: "Work Sans",
+            styles: "wght@400;500;700",
+          },
+        ],
+      },
+    }),
     VitePWA({
       devOptions: {
         enabled: true,
