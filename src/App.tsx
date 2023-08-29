@@ -1,8 +1,8 @@
 import { useCallback, useState } from "react";
 import logo from "/frame-kit.svg";
 import { loadAndRotate } from "./lib/image-magick/load-and-rotate";
-import ReloadPrompt from "./ReloadPrompt";
 import Button from "./components/Button";
+import WorkerPrompt from "./components/WorkerPrompt";
 
 function App() {
   const [url, setUrl] = useState("");
@@ -37,7 +37,7 @@ function App() {
         <Button color="bg-pink">Pink Button</Button>
         <Button color="bg-red">Red Button</Button>
       </div>
-      <ReloadPrompt />
+      <WorkerPrompt />
     </div>
   );
 }

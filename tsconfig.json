@@ -25,7 +25,8 @@
       "vite-plugin-pwa/react",
       "vite-plugin-pwa/info",
       "vite-plugin-arraybuffer/types",
-      "unplugin-fonts/client"
+      "unplugin-fonts/client",
+      "unplugin-icons/types/react"
     ]
   },
   "include": ["src"],

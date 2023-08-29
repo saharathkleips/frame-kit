@@ -4,6 +4,7 @@ import eslintPlugin from "@nabla/vite-plugin-eslint";
 import { VitePWA } from "vite-plugin-pwa";
 import arraybuffer from "vite-plugin-arraybuffer";
 import Unfonts from "unplugin-fonts/vite";
+import Unicons from "unplugin-icons/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,6 +12,7 @@ export default defineConfig({
     arraybuffer(),
     eslintPlugin(),
     react(),
+    Unicons({ compiler: "jsx", jsx: "react" }),
     Unfonts({
       google: {
         families: [
