@@ -2,8 +2,9 @@ import { useCallback, useState } from "react";
 import logo from "/frame-kit.svg";
 import { loadAndRotate } from "./lib/image-magick/load-and-rotate";
 import Button from "./components/Button";
-import WorkerPrompt from "./components/WorkerPrompt";
-
+import ServiceWorkerDialogBox from "./components/dialog/ServiceWorkerDialogBox";
+import UpdateDialogBox from "./components/dialog/UpdateDialogBox";
+import OfflineDialogBox from "./components/dialog/OfflineDialogBox";
 function App() {
   const [url, setUrl] = useState("");
 
@@ -12,13 +13,12 @@ function App() {
     if (imgUrl) setUrl(imgUrl);
   }, []);
 
+  const noop = () => {
+    /** noop */
+  };
+
   return (
-    <div className="min-h-screen bg-tan selection:bg-yellow">
-      <h1 className="font-heading text-xl font-bold">
-        <span className="text-red">[</span>
-        <span> frame kit </span>
-        <span className="text-red">]</span>
-      </h1>
+    <div className="min-h-screen bg-tan p-2 selection:bg-yellow">
       <h2 className="text-lg">
         A simple tool for adding frames and borders around your images.
       </h2>
@@ -37,7 +37,9 @@ function App() {
         <Button color="bg-pink">Pink Button</Button>
         <Button color="bg-red">Red Button</Button>
       </div>
-      <WorkerPrompt />
+      <UpdateDialogBox onClose={noop} onIgnore={noop} onUpdate={noop} />
+      <OfflineDialogBox onClose={noop} />
+      <ServiceWorkerDialogBox />
     </div>
   );
 }

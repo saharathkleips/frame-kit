@@ -4,7 +4,7 @@ import BellIcon from "~icons/teenyicons/bell-outline";
 interface Props {
   header?: string;
   children?: React.ReactNode;
-  onClose?: React.MouseEventHandler<HTMLButtonElement>;
+  onClose: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export default function DialogBox({
