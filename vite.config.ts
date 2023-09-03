@@ -18,7 +18,7 @@ export default defineConfig({
         families: [
           {
             name: "Work Sans",
-            styles: "wght@400;500;700",
+            styles: "wght@400;500;600;700",
           },
         ],
       },
